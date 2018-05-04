@@ -6,6 +6,7 @@
     <section id='comedian-<%= comedian.id %>'>
       <h3 class='comedian-name'><%= comedian.name %></h3>
       <p class='comedian-age'>Age: <%= comedian.age%></p>
+      <p class='comedian-special'>Special: <%= @specials[comedian.id].name %></p>
     </section>
   <% end %>
 </body>

@@ -22,5 +22,15 @@ RSpec.describe Comedian do
         expect(Comedian.all.length).to eq(2)
       end
     end
+
+    describe '.find_special' do
+      it 'should return comedian\'s special' do
+        special_name = 'Funny Special'
+        Comedian.create(name: 'Alex Lauhgsalot', age: 49)
+        special = Special.create(name: special_name, comedian_id: 1)
+
+        expect(Comedian.find_special(1)).to eq(special)
+      end
+    end
   end
 end
